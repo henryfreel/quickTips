@@ -31,10 +31,10 @@ class ViewController: UIViewController {
     @IBAction func onEditingChanged(sender: AnyObject) {
         
         var billAmount = billField.text//.bridgeToObjectiveC().doubleValue
-        println(billAmount)
+        //println(billAmount)
         
         finalBillAmount = [billAmount]
-        println(finalBillAmount)
+        //println(finalBillAmount)
         
         if finalBillAmount.isEmpty {
             

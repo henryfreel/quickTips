@@ -24,21 +24,31 @@ class ViewController2: UIViewController {
         println(finalBillAmountArray)
         
         var tipPercentage = 0.2
-        var billInteger = Int(finalBillAmountArray[0].bridgeToObjectiveC().intValue)
-        println(billInteger)
-        //var tip = billInteger * tipPercentage
+        var billInteger = finalBillAmountArray[0].bridgeToObjectiveC().doubleValue
+        
+        var tip = billInteger * tipPercentage
+        var total = billInteger + tip
+        
+        var valueOfSlider = peopleAmountSlider.value.bridgeToObjectiveC().doubleValue
+        var totalPerPerson = total / valueOfSlider
+        println(total)
+        println(valueOfSlider)
+        println(totalPerPerson)
+        
+        tipPercentageLabel.text = String(format: "$%.2f", tip)
+        totalWithTip.text = String(format: "$%.2f", total)
         
         billAmountLabel.text = "\(finalBillAmountArray[0])"
         peopleAmountLabel.text = "2"
-        //tipLabel.text = "\(tipPercentage)"
-        //totalWithTipLabel.text = "\(finalBillAmountArray) * \(tipPercentage)"
-
+        
+        amountPerPerson.text = String(format: "$%.2f", totalPerPerson)
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func sliderDidChange(sender: AnyObject) {
         
-        var valueOfSlider = peopleAmountSlider.value
+        var valueOfSlider = peopleAmountSlider.value.bridgeToObjectiveC().doubleValue
         peopleAmountLabel.text = String(format: "%.0f", valueOfSlider)
     }
 
