@@ -12,13 +12,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
-    var finalBillAmount = ["Zero"]
+    var finalBillAmount = [String]()
                             
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        var finalBillAmount = ["Zero"]
+        var finalBillAmount = [String]()
         
         billField.becomeFirstResponder()
         submitButton.hidden = true

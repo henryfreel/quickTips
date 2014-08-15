@@ -399,6 +399,7 @@
 				BA626A39199C6F2E00508B48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA626A3A199C6F2E00508B48 /* Build configuration list for PBXNativeTarget "quickTipsTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +408,7 @@
 				BA626A3C199C6F2E00508B48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
