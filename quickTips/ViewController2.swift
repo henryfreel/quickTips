@@ -38,7 +38,7 @@ class ViewController2: UIViewController {
         
         /*---------\/--Visuals-&-Text--\/---------*/
         
-        navigationController.navigationBar.barTintColor = UIColor(red:0.54, green:0.58, blue: 0.6, alpha: 1.0)
+        navigationController.navigationBar.setBackgroundImage(UIImage(named: "transparentNavBar"), forBarMetrics: UIBarMetrics.Default)
         view.backgroundColor = UIColor(red:0.13, green:0.13, blue: 0.13, alpha: 1.0)
         
         billAmountLabel.text = "$\(finalBillAmountArray[0])"
@@ -46,7 +46,7 @@ class ViewController2: UIViewController {
         tipPercentageLabel.text = String(format: "$%.2f", tip)
         totalWithTip.text = String(format: "$%.2f", total)
         
-        peopleAmountLabel.text = "4"
+        peopleAmountLabel.text = "4 People"
         peopleAmountSlider.thumbTintColor = UIColor(red:0.13, green:1.0, blue: 0.13, alpha: 1.0)
         
         var numberOfPeople = 2.0

@@ -23,8 +23,6 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        navigationController.navigationBar.barTintColor = UIColor(red:0.54, green:0.58, blue: 0.6, alpha: 1.0)
-        
         //navigationController.navigationBar.titleTextAttributes = UIColor.redColor()
         
         navigationController.navigationBar.setBackgroundImage(UIImage(named: "transparentNavBar"), forBarMetrics: UIBarMetrics.Default)
