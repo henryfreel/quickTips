@@ -15,8 +15,10 @@ class ViewController2: UIViewController {
     @IBOutlet weak var peopleAmountLabel: UILabel!
     @IBOutlet weak var peopleAmountSlider: UISlider!
     @IBOutlet weak var amountPerPerson: UILabel!
-    
+    @IBOutlet weak var tipControl: UISegmentedControl!
+
     var finalBillAmountArray = [String]()
+    var tipPercentages = [0.18, 0.2, 0.22]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,26 +26,17 @@ class ViewController2: UIViewController {
         
         /*---------\/--Variables--\/----------*/
         
-        var tipPercentage = 0.2
+        var tipPercentages = [0.18, 0.2, 0.22]
+        var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
         
-        //var billInteger = finalBillAmountArray[0].bridgeToObjectiveC().doubleValue
         var billInteger = NSString(string: finalBillAmountArray[0]).doubleValue
         
         var tip = billInteger * tipPercentage
         var total = billInteger + tip
         
-        //var valueOfSlider = peopleAmountSlider.value.bridgeToObjectiveC().doubleValue
-        //-var valueOfSlider = peopleAmountSlider.value.doubleValue
-        
-        //-var totalPerPerson = total / valueOfSlider
         println(total)
-        //-println(valueOfSlider)
-        //-println(totalPerPerson)
         
         /*---------\/--Visuals-&-Text--\/---------*/
-        
-        //navigationController.navigationBar.backIndicatorImage(UIImage(named: "back_button"))
-        //(UIImage(named: "back_button"), forBarMetrics: UIBarMetrics.Default)
         
         navigationController.navigationBar.barTintColor = UIColor(red:0.54, green:0.58, blue: 0.6, alpha: 1.0)
         view.backgroundColor = UIColor(red:0.13, green:0.13, blue: 0.13, alpha: 1.0)
@@ -53,37 +46,21 @@ class ViewController2: UIViewController {
         tipPercentageLabel.text = String(format: "$%.2f", tip)
         totalWithTip.text = String(format: "$%.2f", total)
         
-        peopleAmountLabel.text = "2"
+        peopleAmountLabel.text = "4"
         peopleAmountSlider.thumbTintColor = UIColor(red:0.13, green:1.0, blue: 0.13, alpha: 1.0)
         
         var numberOfPeople = 2.0
         var amountPerPersonVar = total / numberOfPeople
         amountPerPerson.text = String(format: "$%.2f", amountPerPersonVar)
         
-        //-amountPerPerson.text = String(format: "$%.2f", totalPerPerson)
-        
         // Do any additional setup after loading the view.
     }
     
-    /*@IBAction func sliderDidChange(sender: AnyObject) {
+    /*-------\/--Actions--\/------------*/
+    
+    @IBAction func controlDidChnage(sender: AnyObject) {
         
-        var valueOfSlider = peopleAmountSlider.value.bridgeToObjectiveC().doubleValue
-        
-        peopleAmountLabel.text = String(format: "%.0f", valueOfSlider)
-        
-        var billInteger = finalBillAmountArray[0].bridgeToObjectiveC().doubleValue
-        var tipPercentage = 0.2
-        var tip = billInteger * tipPercentage
-        var total = billInteger + tip
-        var totalPerPerson = total / valueOfSlider
-
-        amountPerPerson.text = String(format: "$%.2f", totalPerPerson)
-        
-    }*/
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
     }
     
 }

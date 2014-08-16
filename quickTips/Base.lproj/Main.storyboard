@@ -16,15 +16,14 @@
             <string>Gotham-Light</string>
             <string>Gotham-Light</string>
             <string>Gotham-Light</string>
+            <string>Gotham-Light</string>
         </mutableArray>
         <mutableArray key="Gotham-Medium.otf">
             <string>Gotham-Medium</string>
             <string>Gotham-Medium</string>
             <string>Gotham-Medium</string>
-            <string>Gotham-Medium</string>
         </mutableArray>
         <mutableArray key="Gotham-Thin.otf">
-            <string>Gotham-Thin</string>
             <string>Gotham-Thin</string>
         </mutableArray>
     </customFonts>
@@ -37,16 +36,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" id="2ud-18-ifT">
-                                <rect key="frame" x="16" y="160" width="288" height="82"/>
+                            <view contentMode="scaleToFill" id="1Z1-zE-363">
+                                <rect key="frame" x="16" y="158" width="288" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.5158311128616333" green="0.73993867635726929" blue="0.0016459273174405098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Gotham-Thin" family="Gotham" pointSize="70"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="u3p-Qg-RZH"/>
-                                </connections>
-                            </textField>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XQa-8h-fcf">
                                 <rect key="frame" x="40" y="277" width="240" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -60,6 +54,16 @@
                                     <segue destination="esM-99-raw" kind="push" id="W0Z-Qn-sha"/>
                                 </connections>
                             </button>
+                            <textField clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" id="2ud-18-ifT">
+                                <rect key="frame" x="25" y="160" width="270" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.5158311128616333" green="0.73993867635726929" blue="0.0016459273174405098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Gotham-Thin" family="Gotham" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="onEditingChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="u3p-Qg-RZH"/>
+                                </connections>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much is your bill?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sxt-E7-Zn6">
                                 <rect key="frame" x="40" y="106" width="240" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -76,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="tipsy" id="VRE-eP-S9x"/>
                     <connections>
+                        <outlet property="backgroundView" destination="1Z1-zE-363" id="5ef-Z2-MMy"/>
                         <outlet property="billField" destination="2ud-18-ifT" id="Zj0-av-Y1v"/>
                         <outlet property="submitButton" destination="XQa-8h-fcf" id="wWT-De-pEk"/>
                     </connections>
@@ -97,7 +102,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="12" id="Ih3-aE-9FH">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="2" maxValue="12" id="Ih3-aE-9FH">
                                 <rect key="frame" x="53" y="497" width="214" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.5158311128616333" green="0.73993867635726929" blue="0.0016459273174405098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,25 +110,11 @@
                                     <action selector="sliderDidChange:" destination="esM-99-raw" eventType="valueChanged" id="Rxg-L7-f5T"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tpg-pC-iQ0">
-                                <rect key="frame" x="20" y="468" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Gotham-Thin" family="Gotham" pointSize="24"/>
-                                <color key="textColor" red="0.58017235994338989" green="0.58407050371170044" blue="0.60060524940490723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$20.59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2m1-AV-Gdf">
-                                <rect key="frame" x="20" y="199" width="280" height="36"/>
+                                <rect key="frame" x="21" y="204" width="280" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="36"/>
                                 <color key="textColor" red="0.58017235994338989" green="0.58407050371170044" blue="0.60060524940490723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$225.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aHU-7Z-obO">
-                                <rect key="frame" x="19" y="287" width="280" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="48"/>
-                                <color key="textColor" red="0.5158311128616333" green="0.73993867635726929" blue="0.0016459273174405098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$112.50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VeP-8X-WnY">
@@ -134,28 +125,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$205.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="adP-fz-R4Y">
-                                <rect key="frame" x="19" y="112" width="280" height="36"/>
+                                <rect key="frame" x="19" y="106" width="280" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="36"/>
                                 <color key="textColor" red="0.58017235994338989" green="0.58407050371170044" blue="0.60060524940490723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Bill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rtm-8v-MgP">
-                                <rect key="frame" x="19" y="83" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="14"/>
-                                <color key="textColor" red="0.58017235994338989" green="0.58407050371170044" blue="0.60060524940490723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20% Tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JOJ-AV-Yjc">
-                                <rect key="frame" x="19" y="170" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="14"/>
-                                <color key="textColor" red="0.58017235994338989" green="0.58407050371170044" blue="0.60060524940490723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total With Tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ouP-Ni-Ded">
-                                <rect key="frame" x="20" y="258" width="280" height="21"/>
+                                <rect key="frame" x="19" y="77" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="14"/>
                                 <color key="textColor" red="0.58017235994338989" green="0.58407050371170044" blue="0.60060524940490723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -168,14 +145,48 @@
                                 <color key="textColor" red="0.58017235994338989" green="0.58407050371170044" blue="0.60060524940490723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="one_person" id="DBk-fY-Sgt">
-                                <rect key="frame" x="18" y="499" width="24" height="24"/>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="one_person_black" id="DBk-fY-Sgt">
+                                <rect key="frame" x="19" y="499" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="many_people" id="VJ3-iO-1Jh">
-                                <rect key="frame" x="275" y="496" width="32" height="32"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="many_people_black" id="VJ3-iO-1Jh">
+                                <rect key="frame" x="275" y="497" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tpg-pC-iQ0">
+                                <rect key="frame" x="19" y="468" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="24"/>
+                                <color key="textColor" red="0.58017235994338989" green="0.58407050371170044" blue="0.60060524940490723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$225.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aHU-7Z-obO">
+                                <rect key="frame" x="20" y="296" width="280" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="48"/>
+                                <color key="textColor" red="0.5158311128616333" green="0.73993867635726929" blue="0.0016459273174405098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total With Tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ouP-Ni-Ded">
+                                <rect key="frame" x="21" y="267" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="14"/>
+                                <color key="textColor" red="0.58017235994338989" green="0.58407050371170044" blue="0.60060524940490723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="IQL-8f-iUR">
+                                <rect key="frame" x="16" y="160" width="288" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="22%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="controlDidChnage:" destination="esM-99-raw" eventType="valueChanged" id="j9N-1f-fyG"/>
+                                    <action selector="tipControlChanged:" destination="esM-99-raw" eventType="editingChanged" id="k6j-Yv-iws"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.13316893577575684" green="0.13705348968505859" blue="0.14950266480445862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -185,6 +196,7 @@
                         <outlet property="billAmountLabel" destination="adP-fz-R4Y" id="DHn-XM-qnr"/>
                         <outlet property="peopleAmountLabel" destination="tpg-pC-iQ0" id="6ep-Ih-pMs"/>
                         <outlet property="peopleAmountSlider" destination="Ih3-aE-9FH" id="zUQ-Ul-Y48"/>
+                        <outlet property="tipControl" destination="IQL-8f-iUR" id="9Jv-3w-u5F"/>
                         <outlet property="tipPercentageLabel" destination="2m1-AV-Gdf" id="rNH-dT-gUa"/>
                         <outlet property="totalWithTip" destination="aHU-7Z-obO" id="kyD-IW-nQT"/>
                     </connections>
@@ -214,8 +226,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="many_people" width="36" height="36"/>
-        <image name="one_person" width="36" height="36"/>
+        <image name="many_people_black" width="36" height="36"/>
+        <image name="one_person_black" width="36" height="36"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
