@@ -13,17 +13,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     
     var finalBillAmount = [String]()
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
                             
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        var finalBillAmount = [String]()
+        navigationController.navigationBar.tintColor = UIColor.whiteColor()
+        
+        //navigationController.navigationBar.titleTextAttributes = UIColor.redColor()
+        
+        
+        submitButton.layer.cornerRadius = 4.0
+        billField.layer.cornerRadius = 4.0
+        
+        navigationController.navigationBar.setBackgroundImage(UIImage(named: "transparentNavBar"), forBarMetrics: UIBarMetrics.Default)
+        
+       view.backgroundColor = UIColor(red:0.13, green:0.13, blue: 0.13, alpha: 1.0)
+        billField.backgroundColor = UIColor(red:0.07, green:0.07, blue: 0.07, alpha: 1.0)
         
         billField.becomeFirstResponder()
         submitButton.hidden = true
         
-        //finalBillAmount.removeAll(keepCapacity: false)
+        var finalBillAmount = [String]()
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         

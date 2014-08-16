@@ -21,19 +21,28 @@ class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        println(finalBillAmountArray)
+        navigationController.navigationBar.barTintColor = UIColor.whiteColor()
+        //navigationController.navigationBar.backIndicatorImage(UIImage(named: "back_button"))
+        
+        //(UIImage(named: "back_button"), forBarMetrics: UIBarMetrics.Default)
+        
+        view.backgroundColor = UIColor(red:0.13, green:0.13, blue: 0.13, alpha: 1.0)
         
         var tipPercentage = 0.2
-        var billInteger = finalBillAmountArray[0].bridgeToObjectiveC().doubleValue
+        
+        //var billInteger = finalBillAmountArray[0].bridgeToObjectiveC().doubleValue
+        var billInteger = NSString(string: finalBillAmountArray[0]).doubleValue
         
         var tip = billInteger * tipPercentage
         var total = billInteger + tip
         
-        var valueOfSlider = peopleAmountSlider.value.bridgeToObjectiveC().doubleValue
-        var totalPerPerson = total / valueOfSlider
+        //var valueOfSlider = peopleAmountSlider.value.bridgeToObjectiveC().doubleValue
+        //-var valueOfSlider = peopleAmountSlider.value.doubleValue
+        
+        //-var totalPerPerson = total / valueOfSlider
         println(total)
-        println(valueOfSlider)
-        println(totalPerPerson)
+        //-println(valueOfSlider)
+        //-println(totalPerPerson)
         
         tipPercentageLabel.text = String(format: "$%.2f", tip)
         totalWithTip.text = String(format: "$%.2f", total)
@@ -41,16 +50,26 @@ class ViewController2: UIViewController {
         billAmountLabel.text = "\(finalBillAmountArray[0])"
         peopleAmountLabel.text = "2"
         
-        amountPerPerson.text = String(format: "$%.2f", totalPerPerson)
+        //-amountPerPerson.text = String(format: "$%.2f", totalPerPerson)
         
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func sliderDidChange(sender: AnyObject) {
+    /*@IBAction func sliderDidChange(sender: AnyObject) {
         
         var valueOfSlider = peopleAmountSlider.value.bridgeToObjectiveC().doubleValue
+        
         peopleAmountLabel.text = String(format: "%.0f", valueOfSlider)
-    }
+        
+        var billInteger = finalBillAmountArray[0].bridgeToObjectiveC().doubleValue
+        var tipPercentage = 0.2
+        var tip = billInteger * tipPercentage
+        var total = billInteger + tip
+        var totalPerPerson = total / valueOfSlider
+
+        amountPerPerson.text = String(format: "$%.2f", totalPerPerson)
+        
+    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
