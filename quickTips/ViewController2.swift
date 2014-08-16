@@ -21,12 +21,8 @@ class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController.navigationBar.barTintColor = UIColor.whiteColor()
-        //navigationController.navigationBar.backIndicatorImage(UIImage(named: "back_button"))
         
-        //(UIImage(named: "back_button"), forBarMetrics: UIBarMetrics.Default)
-        
-        view.backgroundColor = UIColor(red:0.13, green:0.13, blue: 0.13, alpha: 1.0)
+        /*---------\/--Variables--\/----------*/
         
         var tipPercentage = 0.2
         
@@ -44,11 +40,25 @@ class ViewController2: UIViewController {
         //-println(valueOfSlider)
         //-println(totalPerPerson)
         
+        /*---------\/--Visuals-&-Text--\/---------*/
+        
+        //navigationController.navigationBar.backIndicatorImage(UIImage(named: "back_button"))
+        //(UIImage(named: "back_button"), forBarMetrics: UIBarMetrics.Default)
+        
+        navigationController.navigationBar.barTintColor = UIColor(red:0.54, green:0.58, blue: 0.6, alpha: 1.0)
+        view.backgroundColor = UIColor(red:0.13, green:0.13, blue: 0.13, alpha: 1.0)
+        
+        billAmountLabel.text = "$\(finalBillAmountArray[0])"
+        
         tipPercentageLabel.text = String(format: "$%.2f", tip)
         totalWithTip.text = String(format: "$%.2f", total)
         
-        billAmountLabel.text = "\(finalBillAmountArray[0])"
         peopleAmountLabel.text = "2"
+        peopleAmountSlider.thumbTintColor = UIColor(red:0.13, green:1.0, blue: 0.13, alpha: 1.0)
+        
+        var numberOfPeople = 2.0
+        var amountPerPersonVar = total / numberOfPeople
+        amountPerPerson.text = String(format: "$%.2f", amountPerPersonVar)
         
         //-amountPerPerson.text = String(format: "$%.2f", totalPerPerson)
         
