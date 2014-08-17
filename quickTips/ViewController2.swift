@@ -38,6 +38,8 @@ class ViewController2: UIViewController {
         
         /*---------\/--Visuals-&-Text--\/---------*/
         
+        navigationController.navigationBar.tintColor = UIColor(red:0.03, green:0.03, blue: 0.03, alpha: 1.0)
+        
         navigationController.navigationBar.setBackgroundImage(UIImage(named: "transparentNavBar"), forBarMetrics: UIBarMetrics.Default)
         view.backgroundColor = UIColor(red:0.13, green:0.13, blue: 0.13, alpha: 1.0)
         
@@ -46,7 +48,7 @@ class ViewController2: UIViewController {
         tipPercentageLabel.text = String(format: "$%.2f", tip)
         totalWithTip.text = String(format: "$%.2f", total)
         
-        peopleAmountLabel.text = "4 People"
+        peopleAmountLabel.text = "with 4 People it's"
         peopleAmountSlider.thumbTintColor = UIColor(red:0.13, green:1.0, blue: 0.13, alpha: 1.0)
         
         var numberOfPeople = 2.0
@@ -61,6 +63,28 @@ class ViewController2: UIViewController {
     @IBAction func controlDidChnage(sender: AnyObject) {
         
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
+        println(tipPercentage)
+        
+        var billInteger = NSString(string: finalBillAmountArray[0]).doubleValue
+        
+        var tip = billInteger * tipPercentage
+        var newTotal = billInteger + tip
+        tipPercentageLabel.text = String(format: "$%.2f", tip)
+        totalWithTip.text = String(format: "$%.2f", newTotal)
+        
     }
     
+    @IBAction func onSliderChanged(sender: AnyObject) {
+        
+        peopleAmountLabel.text = "4 People"
+        var valueOfSlider = Double(peopleAmountSlider.value)
+        peopleAmountLabel.text = String(format: "with %.0f People it's", valueOfSlider)
+        
+        println(valueOfSlider)
+        
+        var test = Int(valueOfSlider)
+        
+        println(test)
+        
+    }
 }

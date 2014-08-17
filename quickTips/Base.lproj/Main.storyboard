@@ -38,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="1Z1-zE-363">
-                                <rect key="frame" x="10" y="158" width="300" height="84"/>
+                                <rect key="frame" x="10" y="154" width="300" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -106,36 +106,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="O2V-uK-B05">
-                                <rect key="frame" x="-27" y="392" width="347" height="176"/>
+                                <rect key="frame" x="-27" y="379" width="347" height="189"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="one_person-1" id="Ldz-Hn-oHS">
-                                        <rect key="frame" x="48" y="135" width="21" height="22"/>
+                                        <rect key="frame" x="48" y="148" width="21" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="many_people" id="2Yh-4p-4Jm">
-                                        <rect key="frame" x="300" y="129" width="33" height="34"/>
+                                        <rect key="frame" x="300" y="142" width="33" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 People" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tpg-pC-iQ0">
-                                        <rect key="frame" x="47" y="28" width="280" height="24"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$112.50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VeP-8X-WnY">
+                                        <rect key="frame" x="47" y="63" width="280" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="18"/>
-                                        <color key="textColor" red="0.58017235994338989" green="0.58407050371170044" blue="0.60060524940490723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Thin" family="Gotham" pointSize="40"/>
+                                        <color key="textColor" red="0.5158311128616333" green="0.73993867635726929" blue="0.0016459273174405098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="each" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZuX-hB-Lg0">
-                                        <rect key="frame" x="47" y="94" width="280" height="36"/>
+                                        <rect key="frame" x="47" y="97" width="280" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Gotham-Thin" family="Gotham" pointSize="14"/>
                                         <color key="textColor" red="0.58017235990000005" green="0.58407050370000002" blue="0.60060524940000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$112.50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VeP-8X-WnY">
-                                        <rect key="frame" x="47" y="60" width="280" height="47"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with 4 People it's" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tpg-pC-iQ0">
+                                        <rect key="frame" x="47" y="26" width="280" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Gotham-Thin" family="Gotham" pointSize="40"/>
-                                        <color key="textColor" red="0.5158311128616333" green="0.73993867635726929" blue="0.0016459273174405098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="18"/>
+                                        <color key="textColor" red="0.58017235994338989" green="0.58407050371170044" blue="0.60060524940490723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -146,11 +146,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.5158311128616333" green="0.73993867635726929" blue="0.0016459273174405098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="sliderDidChange:" destination="esM-99-raw" eventType="valueChanged" id="Rxg-L7-f5T"/>
+                                    <action selector="onSliderChanged:" destination="esM-99-raw" eventType="valueChanged" id="1ym-bW-Y0m"/>
                                 </connections>
                             </slider>
                             <view contentMode="scaleToFill" id="EU2-aR-0HA">
-                                <rect key="frame" x="0.0" y="64" width="320" height="332"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="312"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2425.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aHU-7Z-obO">
