@@ -29,10 +29,10 @@ class ViewController2: UIViewController {
         var tipPercentages = [0.18, 0.2, 0.22]
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
         
-        var billInteger = NSString(string: finalBillAmountArray[0]).doubleValue
+        var billDouble = NSString(string: finalBillAmountArray[0]).doubleValue
         
-        var tip = billInteger * tipPercentage
-        var total = billInteger + tip
+        var tip = billDouble * tipPercentage
+        var total = billDouble + tip
         
         println(total)
         
@@ -63,12 +63,10 @@ class ViewController2: UIViewController {
     @IBAction func controlDidChnage(sender: AnyObject) {
         
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
-        println(tipPercentage)
+        var billDouble = NSString(string: finalBillAmountArray[0]).doubleValue
         
-        var billInteger = NSString(string: finalBillAmountArray[0]).doubleValue
-        
-        var tip = billInteger * tipPercentage
-        var newTotal = billInteger + tip
+        var tip = billDouble * tipPercentage
+        var newTotal = billDouble + tip
         tipPercentageLabel.text = String(format: "$%.2f", tip)
         totalWithTip.text = String(format: "$%.2f", newTotal)
         
@@ -80,12 +78,13 @@ class ViewController2: UIViewController {
         var valueOfSlider = Double(peopleAmountSlider.value)
         peopleAmountLabel.text = String(format: "with %.0f People it's", valueOfSlider)
         
-        println(valueOfSlider)
-        var test = Double(valueOfSlider)
+        var people = Int(valueOfSlider)
+        var billDouble = NSString(string: finalBillAmountArray[0]).doubleValue
+        var billInteger = Int(billDouble)
         
-        var billInteger = NSString(string: finalBillAmountArray[0]).doubleValue
-        
-        var newAmount = billInteger / valueOfSlider
+        var newAmount = billDouble / valueOfSlider
+        println(newAmount)
+        //amountPerPerson.text = "$\(newAmount)"
         amountPerPerson.text = String(format: "$%.2f", newAmount)
         
     }
