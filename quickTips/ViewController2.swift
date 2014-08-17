@@ -51,7 +51,7 @@ class ViewController2: UIViewController {
         peopleAmountLabel.text = "with 4 People it's"
         peopleAmountSlider.thumbTintColor = UIColor(red:0.13, green:1.0, blue: 0.13, alpha: 1.0)
         
-        var numberOfPeople = 2.0
+        var numberOfPeople = 4.0
         var amountPerPersonVar = total / numberOfPeople
         amountPerPerson.text = String(format: "$%.2f", amountPerPersonVar)
         
