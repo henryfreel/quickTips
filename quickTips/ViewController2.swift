@@ -74,17 +74,21 @@ class ViewController2: UIViewController {
     
     @IBAction func onSliderChanged(sender: AnyObject) {
         
+        var billDouble = NSString(string: finalBillAmountArray[0]).doubleValue
+        var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
+        var tip = billDouble * tipPercentage
+        var newTotal = billDouble + tip
+        //var billInteger = Int(billDouble)
+        
         peopleAmountLabel.text = "4 People"
         var valueOfSlider = Double(peopleAmountSlider.value)
         peopleAmountLabel.text = String(format: "with %.0f People it's", valueOfSlider)
         
-        var people = Int(valueOfSlider)
-        var billDouble = NSString(string: finalBillAmountArray[0]).doubleValue
-        var billInteger = Int(billDouble)
         
-        var newAmount = billDouble / valueOfSlider
+        var people = Int(valueOfSlider)
+
+        var newAmount = newTotal / valueOfSlider
         println(newAmount)
-        //amountPerPerson.text = "$\(newAmount)"
         amountPerPerson.text = String(format: "$%.2f", newAmount)
         
     }
