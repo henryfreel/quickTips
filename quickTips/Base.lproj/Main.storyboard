@@ -138,17 +138,17 @@
                                         <color key="textColor" red="0.58017235994338989" green="0.58407050371170044" blue="0.60060524940490723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="2" maxValue="12" id="Ih3-aE-9FH">
+                                        <rect key="frame" x="80" y="144" width="214" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.5158311128616333" green="0.73993867635726929" blue="0.0016459273174405098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="onSliderChanged:" destination="esM-99-raw" eventType="valueChanged" id="1ym-bW-Y0m"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1293928325176239" green="0.12942266464233398" blue="0.12939095497131348" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="2" maxValue="12" id="Ih3-aE-9FH">
-                                <rect key="frame" x="53" y="523" width="214" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.5158311128616333" green="0.73993867635726929" blue="0.0016459273174405098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="onSliderChanged:" destination="esM-99-raw" eventType="valueChanged" id="1ym-bW-Y0m"/>
-                                </connections>
-                            </slider>
                             <view contentMode="scaleToFill" id="EU2-aR-0HA">
                                 <rect key="frame" x="0.0" y="64" width="320" height="312"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

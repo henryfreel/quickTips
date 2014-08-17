@@ -81,10 +81,12 @@ class ViewController2: UIViewController {
         peopleAmountLabel.text = String(format: "with %.0f People it's", valueOfSlider)
         
         println(valueOfSlider)
+        var test = Double(valueOfSlider)
         
-        var test = Int(valueOfSlider)
+        var billInteger = NSString(string: finalBillAmountArray[0]).doubleValue
         
-        println(test)
+        var newAmount = billInteger / valueOfSlider
+        amountPerPerson.text = String(format: "$%.2f", newAmount)
         
     }
 }
