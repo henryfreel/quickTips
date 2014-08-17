@@ -43,7 +43,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XQa-8h-fcf">
-                                <rect key="frame" x="40" y="277" width="240" height="45"/>
+                                <rect key="frame" x="40" y="327" width="240" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.87424784898757935" green="0.87813228368759155" blue="0.89877176284790039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>

@@ -37,7 +37,8 @@ class ViewController: UIViewController {
         backgroundView.backgroundColor = UIColor(red:0.07, green:0.07, blue: 0.07, alpha: 1.0)
         
         billField.becomeFirstResponder()
-        submitButton.hidden = true
+        //submitButton.hidden = true
+        self.submitButton.alpha = 0.0
         
         var finalBillAmount = [String]()
         
@@ -55,16 +56,22 @@ class ViewController: UIViewController {
         
         if finalBillAmount.isEmpty {
             
-            submitButton.hidden = true
+            //submitButton.hidden = true
+            self.submitButton.alpha = 0.0
         } else {
             
+            //submitButton.transform = CGAffineTransformMakeTranslation(0, -50)
             submitButton.hidden = false
+            
+        
+            UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: nil, animations: {
+                
+                self.submitButton.transform = CGAffineTransformMakeTranslation(0, -50)
+                self.submitButton.alpha = 1.0
+                
+            }, nil)
+            
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func onTap(sender: AnyObject) {
